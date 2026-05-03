@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -305,4 +306,2353 @@
         mudarMarca('Destaques', document.querySelector('.btn-aba'));
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SÃO LUÍS IMPORTS | Moda & Sneakers Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+        :root {
+            --primary: #FF6B35;
+            --secondary: #004E89;
+            --accent: #F7B801;
+            --neon-green: #00FF6B;
+            --neon-pink: #FF006E;
+            --dark: #0a0e27;
+            --light: #f8f9fa;
+            --border: #e5e7eb;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        .font-display { font-family: 'Clash Display', sans-serif; }
+
+        /* HEADER PREMIUM */
+        header {
+            background: white;
+            border-bottom: 2px solid var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.1);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .logo-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--neon-pink) 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 26px;
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4); }
+            50% { box-shadow: 0 6px 30px rgba(255, 107, 53, 0.7); }
+        }
+
+        .logo-text {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-subtext {
+            font-size: 10px;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .search-box {
+            position: relative;
+            width: 320px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 12px;
+            padding: 0.75rem 1.2rem;
+            border: 2px solid var(--border);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .search-box:focus-within {
+            background: white;
+            border-color: var(--primary);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.15);
+        }
+
+        #search-input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 13px;
+        }
+
+        #search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 12px;
+            margin-top: 0.5rem;
+            max-height: 400px;
+            overflow-y: auto;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            display: none;
+            z-index: 1001;
+        }
+
+        #search-results.active {
+            display: block;
+        }
+
+        .search-result-item {
+            padding: 1rem 1.2rem;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .search-result-item:hover {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(0, 255, 107, 0.1));
+        }
+
+        .search-result-image {
+            width: 50px;
+            height: 50px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .search-result-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .search-result-details {
+            flex: 1;
+        }
+
+        .search-result-name {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .search-result-price {
+            font-size: 12px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .search-not-found {
+            padding: 2rem;
+            text-align: center;
+            color: #999;
+        }
+
+        .search-not-found i {
+            font-size: 2rem;
+            color: #ddd;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .search-box { display: none; }
+        }
+
+        .header-icon {
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--dark);
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .header-icon:hover { color: var(--primary); }
+
+        .badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: linear-gradient(135deg, var(--neon-pink), var(--primary));
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+        }
+
+        /* NAVEGAÇÃO SECUNDÁRIA */
+        .nav-secondary {
+            background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+            border-bottom: 2px solid var(--border);
+            padding: 0.75rem 2rem;
+            display: flex;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .nav-item {
+            padding: 0.75rem 0;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--dark);
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-item:hover::after, .nav-item.active::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--neon-pink));
+            border-radius: 2px;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            color: var(--primary);
+        }
+
+        /* HERO COM CARROSSEL */
+        .hero-container {
+            position: relative;
+            height: 650px;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-carousel {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 10;
+        }
+
+        .hero-slide-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.45) contrast(1.1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(10, 14, 39, 0.7) 0%, rgba(10, 14, 39, 0.3) 50%, transparent 100%);
+            z-index: 5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 20;
+            color: white;
+            text-align: left;
+            max-width: 700px;
+            padding: 3rem 2rem;
+            margin-left: 2rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .hero-title {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #00FF6B 0%, #FF006E 50%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(0.95rem, 3vw, 1.2rem);
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            color: white;
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+            border-color: white;
+        }
+
+        .hero-controls {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 30;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .carousel-dot.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            width: 32px;
+            border-radius: 6px;
+        }
+
+        /* DESTAQUES */
+        .highlights-section {
+            background: white;
+            padding: 3rem 2rem;
+            margin: -2rem 2rem 0;
+            border-radius: 20px;
+            position: relative;
+            z-index: 50;
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.05);
+        }
+
+        .highlights-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .highlight-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 2px solid var(--border);
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+
+        .highlight-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(255, 107, 53, 0.15);
+        }
+
+        .highlight-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .highlight-title {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .highlight-text {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section-title {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            border-radius: 3px;
+        }
+
+        /* MARCAS CONTAINER */
+        .brands-selector {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .brand-btn {
+            padding: 0.85rem 1.8rem;
+            border: 2px solid var(--border);
+            background: white;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            z-index: -1;
+            transition: all 0.3s;
+            opacity: 0;
+        }
+
+        .brand-btn:hover::before, .brand-btn.active::before {
+            opacity: 1;
+        }
+
+        .brand-btn:hover, .brand-btn.active {
+            color: white;
+            border-color: transparent;
+            transform: scale(1.08);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.3);
+        }
+
+        /* PRODUTOS GRID */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        /* CARD PRODUTO */
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid var(--border);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(0, 255, 107, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+        }
+
+        .product-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 16px 32px rgba(255, 107, 53, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .product-image {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1;
+            background: #f5f5f5;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.08);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 15;
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-brand {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-price {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .product-price .original {
+            font-size: 13px;
+            color: #999;
+            text-decoration: line-through;
+            margin-right: 0.5rem;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: auto;
+        }
+
+        .btn-buy {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-buy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.3);
+        }
+
+        /* CARRINHO SIDEBAR */
+        .cart-sidebar {
+            position: fixed;
+            right: -100%;
+            top: 0;
+            width: 100%;
+            max-width: 450px;
+            height: 100%;
+            background: white;
+            z-index: 2000;
+            box-shadow: -8px 0 30px rgba(0,0,0,0.15);
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-sidebar.active {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 1.5rem;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            color: white;
+        }
+
+        .cart-header h2 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .cart-close {
+            cursor: pointer;
+            font-size: 28px;
+            transition: all 0.3s;
+        }
+
+        .cart-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            background: #f5f5f5;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-item-meta {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-item-price {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cart-item-remove {
+            cursor: pointer;
+            color: #ccc;
+            transition: all 0.3s;
+            font-size: 18px;
+        }
+
+        .cart-item-remove:hover {
+            color: var(--neon-pink);
+        }
+
+        .cart-empty {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+            color: #999;
+        }
+
+        .cart-footer {
+            padding: 1.5rem;
+            border-top: 2px solid var(--border);
+            background: #fafafa;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .cart-total-label {
+            font-size: 14px;
+            font-weight: 700;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cart-total-value {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-checkout {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 0.75rem;
+            letter-spacing: 1px;
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-checkout:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
+        }
+
+        .cart-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1900;
+            display: none;
+            backdrop-filter: blur(4px);
+        }
+
+        .cart-overlay.active {
+            display: block;
+        }
+
+        /* MODAL */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 2500;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            backdrop-filter: blur(8px);
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: modalSlideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes modalSlideUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            cursor: pointer;
+            font-size: 28px;
+            color: #999;
+            z-index: 1;
+            transition: all 0.3s;
+        }
+
+        .modal-close:hover {
+            color: var(--primary);
+            transform: rotate(90deg);
+        }
+
+        .modal-product-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: #f5f5f5;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+        }
+
+        .modal-product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-body {
+            padding: 2.5rem;
+        }
+
+        .modal-brand {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+        }
+
+        .modal-name {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .modal-price {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .size-selector {
+            margin-bottom: 2rem;
+        }
+
+        .size-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .size-option {
+            padding: 0.75rem;
+            border: 2px solid var(--border);
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .size-option:hover {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .size-option.selected {
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            color: white;
+            border-color: transparent;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn-modal-primary {
+            flex: 1;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            letter-spacing: 1px;
+        }
+
+        .btn-modal-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        /* AGENTE CHAT */
+        .chat-agent {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 3000;
+        }
+
+        .chat-button {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 6px 24px rgba(255, 107, 53, 0.4);
+            transition: all 0.3s;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 32px rgba(255, 107, 53, 0.6);
+        }
+
+        .chat-window {
+            position: absolute;
+            bottom: 90px;
+            right: 0;
+            width: 400px;
+            height: 550px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            animation: chatSlideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes chatSlideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .chat-window.active {
+            display: flex;
+        }
+
+        .chat-header {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--neon-pink) 100%);
+            color: white;
+            border-bottom: none;
+        }
+
+        .chat-header h3 {
+            font-family: 'Clash Display', sans-serif;
+            margin-bottom: 0.25rem;
+        }
+
+        .chat-header p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: #fafafa;
+        }
+
+        .message {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message-bubble {
+            max-width: 70%;
+            padding: 0.9rem 1.2rem;
+            border-radius: 14px;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .message.agent .message-bubble {
+            background: white;
+            color: var(--dark);
+            border: 1px solid var(--border);
+        }
+
+        .message.user .message-bubble {
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            color: white;
+        }
+
+        .chat-input-area {
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 0.75rem;
+            background: white;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 0.9rem 1.2rem;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 13px;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .chat-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.1);
+        }
+
+        .chat-send {
+            padding: 0.9rem 1.4rem;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .chat-send:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-family: 'Clash Display', sans-serif;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+            padding-left: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: linear-gradient(135deg, var(--primary), var(--neon-pink));
+            transform: translateY(-4px);
+        }
+
+        @media (max-width: 768px) {
+            .header-top { padding: 0.75rem; }
+            .hero-container { height: 450px; }
+            .hero-title { font-size: 2rem; }
+            .hero-content { margin-left: 0; padding: 2rem 1rem; }
+            .container { padding: 1.5rem; }
+            .section-title { font-size: 24px; }
+            .chat-window { width: 100%; height: 60vh; bottom: 0; right: 0; border-radius: 0; }
+            .products-grid { gap: 1rem; }
+            .cart-sidebar { max-width: 100%; }
+            .highlight-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-top">
+        <a href="#" class="logo">
+            <div class="logo-icon">SL</div>
+            <div>
+                <div class="logo-text">SÃO LUÍS</div>
+                <div class="logo-subtext">IMPORTS</div>
+            </div>
+        </a>
+
+        <div class="search-box">
+            <i class="fas fa-search" style="color: #999;"></i>
+            <input type="text" id="search-input" placeholder="Nike, Adidas, Lacoste...">
+            <div id="search-results"></div>
+        </div>
+
+        <div class="header-actions">
+            <div class="header-icon" onclick="toggleChat()">
+                <i class="fas fa-comments"></i>
+                <span class="badge">1</span>
+            </div>
+            <div class="header-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="badge" id="cart-badge">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-secondary">
+        <a href="#" class="nav-item active" onclick="filterByCategory('todos', event)">👕 Tudo</a>
+        <a href="#" class="nav-item" onclick="filterByCategory('tenis', event)">👟 Tênis</a>
+        <a href="#" class="nav-item" onclick="filterByCategory('camisetas', event)">🎽 Camisetas</a>
+        <a href="#" class="nav-item" onclick="filterByCategory('calcas', event)">👖 Calças</a>
+        <a href="#" class="nav-item" onclick="filterByCategory('bonecamisa', event)">🧢 Bonés & Camisas</a>
+        <a href="#" class="nav-item" onclick="filterByCategory('acessorios', event)">💎 Acessórios</a>
+    </div>
+</header>
+
+<!-- HERO COM CARROSSEL -->
+<section class="hero-container">
+    <div class="hero-carousel" id="hero-carousel">
+        <!-- Slides carregadas via JS -->
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <div class="hero-badge">✨ NOVO DROP 2024</div>
+        <h1 class="hero-title" id="hero-title">Estilo que Define Tendência</h1>
+        <p class="hero-subtitle" id="hero-subtitle">Tênis, roupas e acessórios importados premium. Qualidade que fala mais alto que moda.</p>
+        <div class="hero-cta">
+            <button class="btn btn-primary" onclick="document.querySelector('.nav-secondary').children[1].click()">
+                <i class="fas fa-bolt"></i> Explorar Tênis
+            </button>
+            <button class="btn btn-secondary" onclick="toggleCart()">
+                <i class="fas fa-shopping-bag"></i> Ver Carrinho
+            </button>
+        </div>
+    </div>
+
+    <div class="hero-controls">
+        <button class="carousel-dot active" onclick="currentSlide(0)"></button>
+        <button class="carousel-dot" onclick="currentSlide(1)"></button>
+        <button class="carousel-dot" onclick="currentSlide(2)"></button>
+    </div>
+</section>
+
+<!-- DESTAQUES -->
+<div class="highlights-section">
+    <div class="highlights-grid">
+        <div class="highlight-card" onclick="filterByCategory('todos', event)">
+            <i class="highlight-icon">🚚</i>
+            <h3 class="highlight-title">Entrega Rápida</h3>
+            <p class="highlight-text">São Paulo em 2-3 dias. Outras regiões em até 7 dias.</p>
+        </div>
+        <div class="highlight-card">
+            <i class="highlight-icon">🛡️</i>
+            <h3 class="highlight-title">100% Original</h3>
+            <p class="highlight-text">Todos os produtos são autênticos e verificados.</p>
+        </div>
+        <div class="highlight-card">
+            <i class="highlight-icon">💳</i>
+            <h3 class="highlight-title">Parcelamento</h3>
+            <p class="highlight-text">Pague em até 12x sem juros no WhatsApp.</p>
+        </div>
+        <div class="highlight-card">
+            <i class="highlight-icon">📞</i>
+            <h3 class="highlight-title">Atendimento 24h</h3>
+            <p class="highlight-text">Fale com nossos especialistas a qualquer hora.</p>
+        </div>
+    </div>
+</div>
+
+<!-- CONTAINER PRINCIPAL -->
+<div class="container">
+    <h2 class="section-title" id="section-title">Todos os Produtos</h2>
+
+    <!-- SELETOR DE MARCAS -->
+    <div class="brands-selector" id="brands-selector">
+        <!-- Carregado via JS -->
+    </div>
+
+    <!-- GRID DE PRODUTOS -->
+    <div class="products-grid" id="products-grid">
+        <!-- Produtos carregados via JS -->
+    </div>
+</div>
+
+<!-- CARRINHO SIDEBAR -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+        <h2>MEU CARRINHO</h2>
+        <div class="cart-close" onclick="closeCart()">×</div>
+    </div>
+    <div class="cart-items" id="cart-items">
+        <div class="cart-empty">
+            <div>
+                <i class="fas fa-shopping-bag" style="font-size: 3rem; color: #ccc; margin-bottom: 1rem;"></i>
+                <p>Seu carrinho está vazio</p>
+                <p style="font-size: 12px; margin-top: 0.5rem; color: #bbb;">Adicione produtos para começar!</p>
+            </div>
+        </div>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span class="cart-total-label">Total</span>
+            <span class="cart-total-value" id="cart-total">R$ 0,00</span>
+        </div>
+        <button class="btn-checkout" onclick="checkoutWhatsApp()">
+            <i class="fas fa-whatsapp"></i> Finalizar no WhatsApp
+        </button>
+        <button class="btn btn-secondary" style="width: 100%; padding: 0.9rem; border: 2px solid var(--primary); color: var(--primary);" onclick="closeCart()">
+            Continuar Comprando
+        </button>
+    </div>
+</div>
+
+<!-- MODAL PRODUTO -->
+<div class="modal" id="product-modal">
+    <div class="modal-content">
+        <div class="modal-close" onclick="closeModal()">×</div>
+        <div class="modal-product-image">
+            <img id="modal-product-image" src="" alt="Produto">
+        </div>
+        <div class="modal-body">
+            <p class="modal-brand" id="modal-brand"></p>
+            <h2 class="modal-name" id="modal-name"></h2>
+            <p class="modal-price" id="modal-price"></p>
+
+            <div class="size-selector">
+                <label class="size-label">Selecione o Tamanho</label>
+                <div class="size-grid" id="modal-sizes"></div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-modal-primary" onclick="addToCart()">
+                    <i class="fas fa-shopping-bag"></i> Adicionar ao Carrinho
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CHAT AGENTE -->
+<div class="chat-agent">
+    <button class="chat-button" onclick="toggleChat()">
+        <i class="fas fa-comments"></i>
+    </button>
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+            <h3>💬 Atendimento Premium</h3>
+            <p>Sempre pronto para ajudar! 🎯</p>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message agent">
+                <div class="message-bubble">
+                    Olá! 👋 Bem-vindo à São Luís Imports! Tenho dúvidas sobre algum produto? Estou aqui para ajudar!
+                </div>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" id="chat-input" placeholder="Escreva sua dúvida...">
+            <button class="chat-send" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>São Luís Imports</h4>
+            <p style="font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 1rem;">
+                Sua referência em moda e sneakers premium. Selecionamos os melhores produtos importados para você ficar sempre em destaque.
+            </p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Políticas</h4>
+            <ul>
+                <li><a href="#">Termos de Serviço</a></li>
+                <li><a href="#">Privacidade</a></li>
+                <li><a href="#">Devoluções & Trocas</a></li>
+                <li><a href="#">Frete e Entrega</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contato</h4>
+            <ul>
+                <li><a href="#">📱 (98) 9 9912-3456</a></li>
+                <li><a href="#">💬 WhatsApp 24h</a></li>
+                <li><a href="#">📧 atendimento@saoluisimports.com</a></li>
+                <li><a href="#">📍 São Luís - Maranhão</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 São Luís Imports. Todos os direitos reservados. | Feito com ❤️ para quem tem estilo.</p>
+    </div>
+</footer>
+
+<script>
+    // DADOS ESTRUTURADOS POR MARCA E CATEGORIA
+    const productDatabase = {
+        tenis: {
+            Nike: [
+                {
+                    id: 1,
+                    name: 'Nike Air Force 1 Premium White',
+                    brand: 'Nike',
+                    category: 'Tênis',
+                    price: 849.90,
+                    originalPrice: 999.90,
+                    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600&h=600&fit=crop',
+                    sizes: ['34', '35', '36', '37', '38', '39', '40', '41', '42', '43'],
+                    badge: 'Clássico'
+                },
+                {
+                    id: 2,
+                    name: 'Nike Air Max 90 Sportswear',
+                    brand: 'Nike',
+                    category: 'Tênis',
+                    price: 1099.90,
+                    originalPrice: 1299.90,
+                    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop',
+                    sizes: ['36', '37', '38', '39', '40', '41', '42', '43'],
+                    badge: 'Popular'
+                }
+            ],
+            Adidas: [
+                {
+                    id: 3,
+                    name: 'Adidas Ultraboost 22 OG Black',
+                    brand: 'Adidas',
+                    category: 'Tênis',
+                    price: 1299.90,
+                    originalPrice: 1599.90,
+                    image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=600&fit=crop',
+                    sizes: ['35', '36', '37', '38', '39', '40', '41', '42'],
+                    badge: 'Premium'
+                },
+                {
+                    id: 4,
+                    name: 'Adidas Stan Smith Classic',
+                    brand: 'Adidas',
+                    category: 'Tênis',
+                    price: 599.90,
+                    originalPrice: 799.90,
+                    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop',
+                    sizes: ['34', '35', '36', '37', '38', '39', '40', '41', '42'],
+                    badge: 'Novo'
+                }
+            ],
+            Lacoste: [
+                {
+                    id: 5,
+                    name: 'Lacoste Graduate Pro Leather',
+                    brand: 'Lacoste',
+                    category: 'Tênis',
+                    price: 749.90,
+                    originalPrice: 899.90,
+                    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop',
+                    sizes: ['36', '37', '38', '39', '40', '41', '42'],
+                    badge: 'Elegante'
+                }
+            ],
+            Tommy: [
+                {
+                    id: 6,
+                    name: 'Tommy Hilfiger Leather Sneaker',
+                    brand: 'Tommy Hilfiger',
+                    category: 'Tênis',
+                    price: 679.90,
+                    originalPrice: 879.90,
+                    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop',
+                    sizes: ['36', '37', '38', '39', '40', '41', '42', '43'],
+                    badge: 'Casual'
+                }
+            ]
+        },
+        camisetas: {
+            Nike: [
+                {
+                    id: 7,
+                    name: 'Nike Dri-FIT Performance Tee',
+                    brand: 'Nike',
+                    category: 'Camisetas',
+                    price: 189.90,
+                    originalPrice: 249.90,
+                    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop',
+                    sizes: ['P', 'M', 'G', 'GG', 'XG'],
+                    badge: 'Esportivo'
+                }
+            ],
+            Lacoste: [
+                {
+                    id: 8,
+                    name: 'Lacoste Polo Classic White',
+                    brand: 'Lacoste',
+                    category: 'Camisetas',
+                    price: 279.90,
+                    originalPrice: 379.90,
+                    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop',
+                    sizes: ['P', 'M', 'G', 'GG'],
+                    badge: 'Clássico'
+                }
+            ],
+            Tommy: [
+                {
+                    id: 9,
+                    name: 'Tommy Hilfiger Oxford Shirt',
+                    brand: 'Tommy Hilfiger',
+                    category: 'Camisetas',
+                    price: 319.90,
+                    originalPrice: 419.90,
+                    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop',
+                    sizes: ['P', 'M', 'G', 'GG', 'XG'],
+                    badge: 'Premium'
+                }
+            ],
+            Adidas: [
+                {
+                    id: 10,
+                    name: 'Adidas Essentials Linear Tee',
+                    brand: 'Adidas',
+                    category: 'Camisetas',
+                    price: 149.90,
+                    originalPrice: 199.90,
+                    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop',
+                    sizes: ['P', 'M', 'G', 'GG', 'XG'],
+                    badge: 'Básico'
+                }
+            ]
+        },
+        calcas: {
+            Nike: [
+                {
+                    id: 11,
+                    name: 'Nike Sportswear Tech Fleece',
+                    brand: 'Nike',
+                    category: 'Calças',
+                    price: 399.90,
+                    originalPrice: 549.90,
+                    image: 'https://images.unsplash.com/photo-1542272604-787c62d465d1?w=600&h=600&fit=crop',
+                    sizes: ['P', 'M', 'G', 'GG'],
+                    badge: 'Tecnologia'
+                }
+            ],
+            Adidas: [
+                {
+                    id: 12,
+                    name: 'Adidas Essentials Linear Pants',
+                    brand: 'Adidas',
+                    category: 'Calças',
+                    price: 299.90,
+                    originalPrice: 399.90,
+                    image: 'https://images.unsplash.com/photo-1542272604-787c62d465d1?w=600&h=600&fit=crop',
+                    sizes: ['P', 'M', 'G', 'GG', 'XG'],
+                    badge: 'Conforto'
+                }
+            ],
+            Tommy: [
+                {
+                    id: 13,
+                    name: 'Tommy Hilfiger Chino Pants',
+                    brand: 'Tommy Hilfiger',
+                    category: 'Calças',
+                    price: 349.90,
+                    originalPrice: 449.90,
+                    image: 'https://images.unsplash.com/photo-1542272604-787c62d465d1?w=600&h=600&fit=crop',
+                    sizes: ['P', 'M', 'G', 'GG'],
+                    badge: 'Casual'
+                }
+            ],
+            Lacoste: [
+                {
+                    id: 14,
+                    name: 'Lacoste Tracksuit Bottoms',
+                    brand: 'Lacoste',
+                    category: 'Calças',
+                    price: 379.90,
+                    originalPrice: 479.90,
+                    image: 'https://images.unsplash.com/photo-1542272604-787c62d465d1?w=600&h=600&fit=crop',
+                    sizes: ['P', 'M', 'G', 'GG'],
+                    badge: 'Elegante'
+                }
+            ]
+        },
+        bonecamisa: {
+            Nike: [
+                {
+                    id: 15,
+                    name: 'Nike Sportswear Cap',
+                    brand: 'Nike',
+                    category: 'Bonés & Camisas',
+                    price: 119.90,
+                    originalPrice: 159.90,
+                    image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&h=600&fit=crop',
+                    sizes: ['Único'],
+                    badge: 'Trend'
+                }
+            ],
+            Lacoste: [
+                {
+                    id: 16,
+                    name: 'Lacoste Croc Cap Navy',
+                    brand: 'Lacoste',
+                    category: 'Bonés & Camisas',
+                    price: 149.90,
+                    originalPrice: 199.90,
+                    image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&h=600&fit=crop',
+                    sizes: ['Único'],
+                    badge: 'Clássico'
+                }
+            ],
+            Tommy: [
+                {
+                    id: 17,
+                    name: 'Tommy Hilfiger Button Down Shirt',
+                    brand: 'Tommy Hilfiger',
+                    category: 'Bonés & Camisas',
+                    price: 349.90,
+                    originalPrice: 449.90,
+                    image: 'https://images.unsplash.com/photo-1596169827221-b8c2aea5f0db?w=600&h=600&fit=crop',
+                    sizes: ['P', 'M', 'G', 'GG'],
+                    badge: 'Social'
+                }
+            ],
+            Adidas: [
+                {
+                    id: 18,
+                    name: 'Adidas Trefoil Cap Black',
+                    brand: 'Adidas',
+                    category: 'Bonés & Camisas',
+                    price: 99.90,
+                    originalPrice: 129.90,
+                    image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&h=600&fit=crop',
+                    sizes: ['Único'],
+                    badge: 'Básico'
+                }
+            ]
+        },
+        acessorios: {
+            Nike: [
+                {
+                    id: 19,
+                    name: 'Nike Essentials Socks Pack',
+                    brand: 'Nike',
+                    category: 'Acessórios',
+                    price: 79.90,
+                    originalPrice: 99.90,
+                    image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=600&fit=crop',
+                    sizes: ['Único'],
+                    badge: 'Pack'
+                }
+            ],
+            Tommy: [
+                {
+                    id: 20,
+                    name: 'Tommy Hilfiger Leather Belt',
+                    brand: 'Tommy Hilfiger',
+                    category: 'Acessórios',
+                    price: 249.90,
+                    originalPrice: 349.90,
+                    image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=600&fit=crop',
+                    sizes: ['Único'],
+                    badge: 'Premium'
+                }
+            ],
+            Lacoste: [
+                {
+                    id: 21,
+                    name: 'Lacoste Canvas Bag',
+                    brand: 'Lacoste',
+                    category: 'Acessórios',
+                    price: 299.90,
+                    originalPrice: 399.90,
+                    image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=600&fit=crop',
+                    sizes: ['Único'],
+                    badge: 'Elegante'
+                }
+            ],
+            Adidas: [
+                {
+                    id: 22,
+                    name: 'Adidas Trefoil Backpack',
+                    brand: 'Adidas',
+                    category: 'Acessórios',
+                    price: 229.90,
+                    originalPrice: 299.90,
+                    image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=600&fit=crop',
+                    sizes: ['Único'],
+                    badge: 'Funcional'
+                }
+            ]
+        }
+    };
+
+    // IMAGENS DO HERO
+    const heroSlides = [
+        {
+            image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1400&h=700&fit=crop',
+            title: 'Tênis que Combinam Estilo e Conforto',
+            subtitle: 'Descubra marcas premium como Nike, Adidas, Lacoste e Tommy. Escolha quem você quer ser.'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1506629082632-66d440dd5230?w=1400&h=700&fit=crop',
+            title: 'Moda Importada para Quem se Destaca',
+            subtitle: 'Roupas e acessórios de qualidade premium. Entrega em São Luís com rapidez.'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1533727937480-da3ca97ef56e?w=1400&h=700&fit=crop',
+            title: 'Seja Você. Seja Premium.',
+            subtitle: 'Colecione estilo. Viva a diferença. São Luís Imports: sua loja de confiança.'
+        }
+    ];
+
+    // VARIÁVEIS GLOBAIS
+    let cart = [];
+    let currentCategory = 'todos';
+    let selectedBrand = 'Todos';
+    let currentHeroSlide = 0;
+    let selectedProduct = null;
+    let selectedSize = null;
+    let allProducts = [];
+    let heroInterval = null;
+
+    // INICIALIZAÇÃO
+    function init() {
+        loadHeroCarousel();
+        loadAllProducts();
+        setupEventListeners();
+        startHeroAutoPlay();
+    }
+
+    // CARROUSEL HERO - AUTOPLAY
+    function startHeroAutoPlay() {
+        if (heroInterval) clearInterval(heroInterval);
+        heroInterval = setInterval(() => {
+            const slides = document.querySelectorAll('.hero-slide');
+            slides[currentHeroSlide].classList.remove('active');
+            currentHeroSlide = (currentHeroSlide + 1) % slides.length;
+            slides[currentHeroSlide].classList.add('active');
+            updateHeroContent();
+            updateCarouselDots();
+        }, 6000);
+    }
+
+    function loadHeroCarousel() {
+        const carousel = document.getElementById('hero-carousel');
+        carousel.innerHTML = heroSlides.map((slide, index) => `
+            <div class="hero-slide ${index === 0 ? 'active' : ''}" onclick="openProductModal(1)">
+                <img src="${slide.image}" class="hero-slide-image">
+            </div>
+        `).join('');
+    }
+
+    function currentSlide(index) {
+        const slides = document.querySelectorAll('.hero-slide');
+        slides[currentHeroSlide].classList.remove('active');
+        currentHeroSlide = index;
+        slides[currentHeroSlide].classList.add('active');
+        updateHeroContent();
+        updateCarouselDots();
+        startHeroAutoPlay();
+    }
+
+    function updateHeroContent() {
+        const slide = heroSlides[currentHeroSlide];
+        document.getElementById('hero-title').textContent = slide.title;
+        document.getElementById('hero-subtitle').textContent = slide.subtitle;
+    }
+
+    function updateCarouselDots() {
+        document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentHeroSlide);
+        });
+    }
+
+    // CARREGAR TODOS OS PRODUTOS
+    function loadAllProducts() {
+        allProducts = [];
+        for (const category in productDatabase) {
+            for (const brand in productDatabase[category]) {
+                allProducts.push(...productDatabase[category][brand]);
+            }
+        }
+    }
+
+    // FILTRAR POR CATEGORIA
+    function filterByCategory(category, e) {
+        e.preventDefault();
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        event.target.classList.add('active');
+
+        currentCategory = category;
+        selectedBrand = 'Todos';
+        loadProducts(category);
+    }
+
+    // CARREGAR PRODUTOS
+    function loadProducts(category) {
+        const grid = document.getElementById('products-grid');
+        grid.innerHTML = '';
+
+        let products = [];
+        if (category === 'todos') {
+            products = [...allProducts];
+        } else if (productDatabase[category]) {
+            for (const brand in productDatabase[category]) {
+                products.push(...productDatabase[category][brand]);
+            }
+        }
+
+        // Carregar seletor de marcas
+        const brands = ['Todos'];
+        if (category !== 'todos' && productDatabase[category]) {
+            brands.push(...Object.keys(productDatabase[category]));
+        }
+
+        const brandSelector = document.getElementById('brands-selector');
+        brandSelector.innerHTML = brands.map(brand => `
+            <button class="brand-btn ${brand === selectedBrand ? 'active' : ''}" onclick="filterByBrand('${brand}')">
+                ${brand}
+            </button>
+        `).join('');
+
+        // Filtrar por marca
+        if (selectedBrand !== 'Todos') {
+            products = products.filter(p => p.brand === selectedBrand);
+        }
+
+        // Renderizar produtos
+        products.forEach(product => {
+            const card = createProductCard(product);
+            grid.appendChild(card);
+        });
+
+        // Atualizar título
+        const categoryNames = {
+            'todos': 'Todos os Produtos',
+            'tenis': 'TÊNIS Premium',
+            'camisetas': 'CAMISETAS',
+            'calcas': 'CALÇAS',
+            'bonecamisa': 'BONÉS & CAMISAS',
+            'acessorios': 'ACESSÓRIOS'
+        };
+        document.getElementById('section-title').textContent = categoryNames[category] || 'Todos os Produtos';
+    }
+
+    function filterByBrand(brand) {
+        selectedBrand = brand;
+        loadProducts(currentCategory);
+    }
+
+    // CRIAR CARD DE PRODUTO
+    function createProductCard(product) {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+            <div class="product-image" onclick="openProductModal(${product.id})">
+                <img src="${product.image}" alt="${product.name}">
+                <div class="product-badge">${product.badge}</div>
+            </div>
+            <div class="product-info">
+                <p class="product-brand">${product.brand}</p>
+                <h3 class="product-name">${product.name}</h3>
+                <div class="product-price">
+                    R$ ${product.price.toFixed(2).replace('.', ',')}
+                </div>
+                <div class="product-actions">
+                    <button class="btn-buy" onclick="openProductModal(${product.id})">
+                        <i class="fas fa-shopping-bag"></i> Comprar
+                    </button>
+                </div>
+            </div>
+        `;
+        return card;
+    }
+
+    // ABRIR MODAL
+    function openProductModal(productId) {
+        selectedProduct = allProducts.find(p => p.id === productId);
+        if (!selectedProduct) return;
+
+        document.getElementById('modal-brand').textContent = selectedProduct.brand;
+        document.getElementById('modal-name').textContent = selectedProduct.name;
+        document.getElementById('modal-product-image').src = selectedProduct.image;
+        document.getElementById('modal-price').innerHTML = 
+            `R$ ${selectedProduct.price.toFixed(2).replace('.', ',')}`;
+
+        const sizeGrid = document.getElementById('modal-sizes');
+        sizeGrid.innerHTML = '';
+        selectedProduct.sizes.forEach(size => {
+            const btn = document.createElement('button');
+            btn.className = 'size-option';
+            btn.textContent = size;
+            btn.onclick = () => selectSize(size, btn);
+            sizeGrid.appendChild(btn);
+        });
+
+        selectedSize = null;
+        document.getElementById('product-modal').classList.add('active');
+    }
+
+    function closeModal() {
+        document.getElementById('product-modal').classList.remove('active');
+        selectedProduct = null;
+        selectedSize = null;
+    }
+
+    function selectSize(size, element) {
+        document.querySelectorAll('.size-option').forEach(btn => {
+            btn.classList.remove('selected');
+        });
+        element.classList.add('selected');
+        selectedSize = size;
+    }
+
+    // ADICIONAR AO CARRINHO
+    function addToCart() {
+        if (!selectedSize) {
+            alert('Selecione um tamanho!');
+            return;
+        }
+
+        const item = {
+            id: selectedProduct.id,
+            name: selectedProduct.name,
+            brand: selectedProduct.brand,
+            price: selectedProduct.price,
+            image: selectedProduct.image,
+            size: selectedSize,
+            quantity: 1
+        };
+
+        const existingItem = cart.find(c => c.id === item.id && c.size === item.size);
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push(item);
+        }
+
+        updateCart();
+        closeModal();
+        openCart();
+    }
+
+    // ATUALIZAR CARRINHO
+    function updateCart() {
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartBadge = document.getElementById('cart-badge');
+
+        if (cart.length === 0) {
+            cartItemsContainer.innerHTML = `
+                <div class="cart-empty">
+                    <div>
+                        <i class="fas fa-shopping-bag" style="font-size: 3rem; color: #ccc; margin-bottom: 1rem;"></i>
+                        <p>Seu carrinho está vazio</p>
+                        <p style="font-size: 12px; margin-top: 0.5rem; color: #bbb;">Adicione produtos para começar!</p>
+                    </div>
+                </div>
+            `;
+            cartBadge.textContent = '0';
+            return;
+        }
+
+        cartItemsContainer.innerHTML = cart.map((item, index) => `
+            <div class="cart-item">
+                <div class="cart-item-image">
+                    <img src="${item.image}" alt="${item.name}">
+                </div>
+                <div class="cart-item-details">
+                    <div class="cart-item-name">${item.name}</div>
+                    <div class="cart-item-meta">Brand: ${item.brand}</div>
+                    <div class="cart-item-meta">Tamanho: ${item.size}</div>
+                    <div class="cart-item-meta">Qtd: ${item.quantity}</div>
+                    <div class="cart-item-price">R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}</div>
+                </div>
+                <div class="cart-item-remove" onclick="removeFromCart(${index})">
+                    <i class="fas fa-trash-alt"></i>
+                </div>
+            </div>
+        `).join('');
+
+        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        document.getElementById('cart-total').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+        cartBadge.textContent = cart.length;
+    }
+
+    function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCart();
+    }
+
+    function openCart() {
+        document.getElementById('cart-sidebar').classList.add('active');
+        document.getElementById('cart-overlay').classList.add('active');
+    }
+
+    function closeCart() {
+        document.getElementById('cart-sidebar').classList.remove('active');
+        document.getElementById('cart-overlay').classList.remove('active');
+    }
+
+    function toggleCart() {
+        const sidebar = document.getElementById('cart-sidebar');
+        if (sidebar.classList.contains('active')) {
+            closeCart();
+        } else {
+            openCart();
+        }
+    }
+
+    // BUSCA COM VALIDAÇÃO
+    function setupSearchListener() {
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+
+            if (!query) {
+                searchResults.classList.remove('active');
+                return;
+            }
+
+            const results = allProducts.filter(product => 
+                product.name.toLowerCase().includes(query) ||
+                product.brand.toLowerCase().includes(query) ||
+                product.category.toLowerCase().includes(query)
+            );
+
+            if (results.length === 0) {
+                searchResults.innerHTML = `
+                    <div class="search-not-found">
+                        <i class="fas fa-search"></i>
+                        <p><strong>Nenhum produto encontrado</strong></p>
+                        <p>Desculpe! Não temos "<strong>${query}</strong>" em estoque no momento.</p>
+                        <p style="font-size: 11px; margin-top: 0.75rem; opacity: 0.7;">Tente buscar por: Nike, Adidas, Lacoste, Tommy ou as categorias disponíveis.</p>
+                    </div>
+                `;
+            } else {
+                searchResults.innerHTML = results.slice(0, 8).map(product => `
+                    <div class="search-result-item" onclick="openProductModal(${product.id}); searchInput.value = ''; searchResults.classList.remove('active');">
+                        <div class="search-result-image">
+                            <img src="${product.image}" alt="${product.name}">
+                        </div>
+                        <div class="search-result-details">
+                            <div class="search-result-name">${product.name}</div>
+                            <div class="search-result-price">
+                                <span style="font-size: 10px; color: #999;">${product.brand}</span> • 
+                                R$ ${product.price.toFixed(2).replace('.', ',')}
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            searchResults.classList.add('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.search-box')) {
+                searchResults.classList.remove('active');
+            }
+        });
+    }
+
+    // CHAT AGENTE
+    function toggleChat() {
+        document.getElementById('chat-window').classList.toggle('active');
+    }
+
+    function sendMessage() {
+        const input = document.getElementById('chat-input');
+        const message = input.value.trim();
+        
+        if (!message) return;
+
+        const messagesContainer = document.getElementById('chat-messages');
+        const userMessage = document.createElement('div');
+        userMessage.className = 'message user';
+        userMessage.innerHTML = `<div class="message-bubble">${message}</div>`;
+        messagesContainer.appendChild(userMessage);
+
+        input.value = '';
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+        setTimeout(() => {
+            const agentMessage = document.createElement('div');
+            agentMessage.className = 'message agent';
+            const responses = [
+                'Ótima pergunta! 🎯 Qual categoria você está procurando?',
+                'Entendi! Você tem dúvida sobre tamanhos ou frete? 📦',
+                'Certo! Posso ajudar com informações sobre as marcas ou produtos.',
+                'Legal! Quer saber mais sobre uma marca específica? Nike, Adidas, Lacoste, Tommy? 👟',
+                'Tudo bem! Posso orientar você sobre a compra. Qual é sua dúvida? 💬'
+            ];
+            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+            agentMessage.innerHTML = `<div class="message-bubble">${randomResponse}</div>`;
+            messagesContainer.appendChild(agentMessage);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }, 700);
+    }
+
+    // CHECKOUT WHATSAPP
+    function checkoutWhatsApp() {
+        if (cart.length === 0) {
+            alert('Seu carrinho está vazio!');
+            return;
+        }
+
+        let message = '🛍️ *NOVO PEDIDO - SÃO LUÍS IMPORTS*\n\n';
+        let total = 0;
+
+        cart.forEach(item => {
+            const subtotal = item.price * item.quantity;
+            total += subtotal;
+            message += `✓ *${item.brand}* - ${item.name}\n`;
+            message += `  └ Tamanho: ${item.size} | Qtd: ${item.quantity}\n`;
+            message += `  └ R$ ${subtotal.toFixed(2).replace('.', ',')}\n\n`;
+        });
+
+        message += `━━━━━━━━━━━━━━━━━━\n`;
+        message += `💰 *TOTAL: R$ ${total.toFixed(2).replace('.', ',')}*\n\n`;
+        message += `Estou pronto para aproveitar essa oportunidade! 🔥`;
+
+        const whatsappNumber = '5598991234567';
+        const encodedMessage = encodeURIComponent(message);
+        window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+    }
+
+    // EVENT LISTENERS
+    function setupEventListeners() {
+        document.getElementById('chat-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        setupSearchListener();
+    }
+
+    // INICIAR
+    init();
+</script>
+
+</body>
+>>>>>>> 3634cb2 (alteracao na estrutura e varias funcoes)
 </html>
