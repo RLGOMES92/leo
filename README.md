@@ -1,20 +1,14 @@
-# 👟 São Luís Imports — Site Comercial
+# São Luís Imports — Vitrine Comercial
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+Site comercial desenvolvido para uma operação de moda e sneakers, com foco em apresentação de produtos, identidade visual e experiência mobile.
 
-## 🎯 Visão geral
+## 🎯 Problema de negócio
 
-Site comercial desenvolvido para uma operação de moda e sneakers, com apresentação de marca, produtos e experiência visual responsiva.
+Uma operação de varejo precisa apresentar produtos e diferenciais rapidamente, principalmente no celular, conduzindo o visitante para o próximo passo comercial.
 
-## 💼 Problema de negócio
+## 💡 Solução
 
-Operações de varejo precisam apresentar produtos, diferenciais e identidade de marca de forma rápida em dispositivos móveis, facilitando o próximo passo do cliente.
-
-### Solução
-
-Uma experiência web visual, responsiva e orientada a produto, estruturada para servir como vitrine digital e base para futuras integrações comerciais.
+Uma vitrine digital responsiva, visual e preparada para evolução comercial, permitindo organizar produtos, destacar a marca e criar pontos de contato com potenciais clientes.
 
 ## ✨ Funcionalidades
 
@@ -23,33 +17,32 @@ Uma experiência web visual, responsiva e orientada a produto, estruturada para 
 - Identidade visual personalizada
 - Layout responsivo
 - Experiência mobile
-- Estrutura preparada para CTAs comerciais
-- Organização de assets e conteúdo visual
+- CTAs comerciais
+- Organização de conteúdo e assets
 
 ## 🏗️ Arquitetura
 
 ```
 index.html
-├── Estrutura da interface
+├── Interface
 ├── Estilos e scripts
 ├── Conteúdo comercial
 └── img/
     └── Assets visuais
 ```
 
-## 📁 Estrutura
+## 💼 Aplicações comerciais
 
-```
-leo/
-├── index.html
-├── img/
-├── leo/
-├── .vscode/
-├── .gitignore
-└── README.md
-```
+A base pode evoluir para:
 
-## 🚀 Execução
+- Catálogo digital
+- Geração e captura de leads
+- Atendimento via WhatsApp
+- Checkout ou integração com e-commerce
+- Automação comercial
+- Agente de IA para atendimento e qualificação
+
+## 🚀 Execução local
 
 ```bash
 git clone https://github.com/RLGOMES92/leo.git
@@ -57,12 +50,6 @@ cd leo
 python -m http.server 8000
 ```
 
-Acesse `http://localhost:8000`.
+## 👨‍💻 Autor
 
-## 📌 Aplicação comercial
-
-A base pode evoluir para catálogo, geração de leads, checkout, integração com WhatsApp e, posteriormente, um agente de IA para atendimento e qualificação de clientes.
-
----
-
-**Rodrigo Gomes — Sites de Alta Conversão + Agentes de IA**
+Rodrigo Gomes — Sites de Alta Conversão + Agentes de IA
